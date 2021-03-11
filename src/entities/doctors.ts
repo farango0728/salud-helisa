@@ -6,7 +6,7 @@ import {
   JoinTable
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
-import Specialty from './specialty'
+import Specialty from './specialty';
   
   @Entity()
 export default class Doctors extends SharedProp{
@@ -23,7 +23,7 @@ export default class Doctors extends SharedProp{
       @Column()
       state: boolean 
 
-       /** Relation to Specialty */ 
+      /** Relation to Specialty */ 
       @ManyToOne(() => Specialty, specialty => specialty.id)
       @JoinTable()
       specialty: Specialty[];

@@ -21,28 +21,28 @@ export async function getDoctors(req: Hapi.request) : Promise<Doctors[]>{
 
 export async function createDoctor(req: Hapi.request) : Promise<Message> {
   try{
-      const connection: Connection = req.server.app.connection;
+    const connection: Connection = req.server.app.connection;
 
-      const exitDoctor = await connection.manager.count(Doctors, {
-        where: {
-          identification: req.payload.identification
-        },
-      });
+    const exitDoctor = await connection.manager.count(Doctors, {
+      where: {
+        identification: req.payload.identification
+      },
+    });
       
-      if(exitDoctor) throw Boom.badRequest('La Identificacion del Medico ya Existe');
+    if(exitDoctor) throw Boom.badRequest('La Identificacion del Medico ya Existe');
 
-      const newDoctor = new Doctors();
-      newDoctor.identification = req.payload.identification;
-      newDoctor.name = req.payload.name;
-      newDoctor.cardNumber = req.payload.cardNumber;
-      newDoctor.specialty = req.payload.idSpecialty;
-      newDoctor.state = req.payload.state;
-      await connection.manager.save(newDoctor);
-      return {'message' : 'Los datos del Medico se crearon'};
-    }catch (error) {
-      console.log('createDoctor Error:', error);
-      return {'message' : error};
-    }
+    const newDoctor = new Doctors();
+    newDoctor.identification = req.payload.identification;
+    newDoctor.name = req.payload.name;
+    newDoctor.cardNumber = req.payload.cardNumber;
+    newDoctor.specialty = req.payload.idSpecialty;
+    newDoctor.state = req.payload.state;
+    await connection.manager.save(newDoctor);
+    return {'message' : 'Los datos del Medico se crearon'};
+  }catch (error) {
+    console.log('createDoctor Error:', error);
+    return {'message' : error};
+  }
 } 
 
 export async function updateDoctor(req: Hapi.request) : Promise<Message>   {
