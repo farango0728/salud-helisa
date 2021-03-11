@@ -1,5 +1,5 @@
 import Hapi from '@hapi/hapi';
-import Joi from '@hapi/joi'
+import Joi from '@hapi/joi';
 import { Options } from '../../config/types';
 import { getDoctors, createDoctor, updateDoctor } from './controller';
 
@@ -27,7 +27,7 @@ export = {
           payload: Joi.object().keys({
             identification: Joi.number().required(),
             name: Joi.string().required(),
-            specialty: Joi.number().min(1).max(9999).required().strict(true),
+            idSpecialty: Joi.number().min(11111).max(999999).required().strict(true),
             cardNumber: Joi.string().required(),
             state: Joi.boolean().required()
           })
@@ -46,7 +46,7 @@ export = {
           payload: Joi.object().keys({
             identification: Joi.number().required(),
             name: Joi.string().required(),
-            specialty: Joi.number().min(1).max(9999).required().strict(true),
+            idSpecialty: Joi.number().min(11111).max(999999).required().strict(true),
             cardNumber: Joi.string().required(),
             state: Joi.boolean().required()
           })
