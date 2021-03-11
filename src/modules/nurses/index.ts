@@ -1,58 +1,54 @@
 import Hapi from '@hapi/hapi';
 import Joi from '@hapi/joi';
 import { Options } from '../../config/types';
-import { getDoctors, createDoctor, updateDoctor } from './controller';
+import { getNurses, createNurse, updateNurse } from './controller';
 
 export = {
-  name: 'Doctors',
+  name: 'Nurses',
   register: function (server: Hapi.Server, options: Options): void {
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/doctors`,
+      path: `${options.routePrefix}/nurses`,
       options: {
-        description: 'Get status service',
+        description: 'Get nurses service',
         notes: 'Service to obtain the health of the project',
         tags: ['api']
       },
-      handler: getDoctors,
+      handler: getNurses,
     });
     server.route({
       method: 'POST',
-      path: `${options.routePrefix}/doctor`,
+      path: `${options.routePrefix}/nurse`,
       options: {
-        description: 'Get doctor service',
+        description: 'Get nurses service',
         notes: 'Service to obtain the health of the project',
         tags: ['api'],
         validate: {
           payload: Joi.object().keys({
             identification: Joi.number().required(),
             name: Joi.string().required(),
-            idSpecialty: Joi.number().min(11111).max(999999).required().strict(true),
-            cardNumber: Joi.string().required(),
             state: Joi.boolean().required()
           })
         },
       },
-      handler: createDoctor,
+      handler: createNurse,
     });
     server.route({
       method: 'PUT',
-      path: `${options.routePrefix}/updateDoctor`,
+      path: `${options.routePrefix}/updateNurse`,
       options: {
-        description: 'Get updateDoctor service',
+        description: 'Get updateNurse service',
         notes: 'Service to obtain the health of the project',
         tags: ['api'],
         validate: {
           payload: Joi.object().keys({
             identification: Joi.number().required(),
             name: Joi.string().required(),
-            idSpecialty: Joi.number().min(11111).max(999999).required().strict(true),
-            cardNumber: Joi.string().required(),
             state: Joi.boolean().required()
           })
         },
       },
-      handler: updateDoctor,
+      handler: updateNurse,
     });
   },
 };
