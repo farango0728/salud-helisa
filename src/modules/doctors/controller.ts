@@ -6,17 +6,20 @@ import { Message} from './types';
 
 
 export async function getDoctors(req: Hapi.request) : Promise<Doctors[]>{
-  
-  const connection: Connection = req.server.app.connection;
-  const data = await connection.manager.find(Doctors, {
-    relations: ['specialty'],
-    order: {
-      name: 'ASC' 
-    },
-    cache: true
-  });
-  
-  return data;
+  try{
+    const connection: Connection = req.server.app.connection;
+    const data = await connection.manager.find(Doctors, {
+      relations: ['specialty'],
+      order: {
+        name: 'ASC' 
+      },
+      cache: true
+    });  
+    return data;
+  }catch (error) {
+    console.log('getDoctors Error:', error);
+    return error;
+  }
 }
 
 export async function createDoctor(req: Hapi.request) : Promise<Message> {
@@ -29,7 +32,7 @@ export async function createDoctor(req: Hapi.request) : Promise<Message> {
       },
     });
       
-    if(exitDoctor) throw Boom.badRequest('La Identificacion del Medico ya Existe');
+    if(exitDoctor) throw Boom.badRequest(`La Identificacion : ${req.payload.identification} del Medico ya Existe`);
 
     const newDoctor = new Doctors();
     newDoctor.identification = req.payload.identification;
@@ -55,6 +58,15 @@ export async function updateDoctor(req: Hapi.request) : Promise<Message>   {
       idSpecialty,
       state
     } = req.payload;
+
+    const exitDoctor = await connection.manager.count(Doctors, {
+      where: {
+        identification: identification
+      },
+    });
+      
+    if(!exitDoctor) throw Boom.badRequest(`La Identificacion : ${identification} del Medico no existe en plataforma`);
+
 
     await connection.manager.update(Doctors, identification, {
       name,
