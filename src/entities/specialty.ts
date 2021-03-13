@@ -6,6 +6,7 @@ import {
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
 import Doctors from './doctors';
+import MedicalAppointments from './medicalAppointments';
     
     @Entity()
 export default class Specialty extends SharedProp{
@@ -22,4 +23,6 @@ export default class Specialty extends SharedProp{
          /** Relation to Doctors */
          @OneToMany(() => Doctors, doctor => doctor.specialty)
          Doctors: Doctors;
+
+         
 }
