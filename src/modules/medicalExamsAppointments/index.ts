@@ -1,7 +1,6 @@
 import Hapi from '@hapi/hapi';
 import Joi from '@hapi/joi';
 import { Options } from '../../config/types';
-import { createMedicalExam } from '../medicalExams/controller';
 import { getMedicalExamsAppointment, createMedicalExamAppointment} from './controller';
 
 export = {

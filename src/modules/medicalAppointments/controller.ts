@@ -48,7 +48,6 @@ export async function updateMedicalAppointment(req: Hapi.request) : Promise<Mess
     const connection: Connection = req.server.app.connection;
     const {
       identification,
-      name,
       state
     } = req.payload;
 
@@ -113,7 +112,7 @@ export async function getMedicalAppointmentByPatientbyDates(req: Hapi.request) :
   
   try{
     const connection: Connection = req.server.app.connection;
-    const {idPatient, date} = req.query;
+    const {idPatient} = req.query;
     
     const initialDate = new Date(req.query.initialDate);
     const finalDate = new Date(req.query.finalDate);
