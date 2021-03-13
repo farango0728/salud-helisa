@@ -3,10 +3,12 @@ import {
   Column,
   PrimaryColumn,
   ManyToOne,
-  JoinTable
+  JoinTable,
+  OneToMany
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
 import Specialty from './specialty';
+import MedicalAppointments from './medicalAppointments';
   
   @Entity()
 export default class Doctors extends SharedProp{
@@ -25,6 +27,12 @@ export default class Doctors extends SharedProp{
 
       /** Relation to Specialty */ 
       @ManyToOne(() => Specialty, specialty => specialty.id)
-      @JoinTable()
       specialty: Specialty[];
+
+      /** Relation to MedicalAppointments */
+      @OneToMany(
+        type => MedicalAppointments,
+        medicalAppointments => medicalAppointments.doctor,
+      )
+      medicalAppointments: MedicalAppointments[];
 }
