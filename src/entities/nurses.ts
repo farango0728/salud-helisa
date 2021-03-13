@@ -1,12 +1,12 @@
 import {
-    Entity,
-    Column,
-    PrimaryColumn,
-  } from 'typeorm';
-  import {SharedProp} from './sharedProp.helpers';
+  Entity,
+  Column,
+  PrimaryColumn,
+} from 'typeorm';
+import {SharedProp} from './sharedProp.helpers';
       
       @Entity()
-  export default class Nurses extends SharedProp{
+export default class Nurses extends SharedProp{
       
           @PrimaryColumn() 
           identification: number;
@@ -16,4 +16,4 @@ import {
       
           @Column()
           state: boolean  
-  }
+}
