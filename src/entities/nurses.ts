@@ -5,7 +5,7 @@ import {
   OneToMany
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
-import MedicalAppointments from './medicalAppointments'
+import MedicalAppointments from './medicalAppointments';
       
 @Entity()
 export default class Nurses extends SharedProp{
