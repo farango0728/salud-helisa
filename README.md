@@ -47,13 +47,13 @@ Si necesita actualizar `npm`, puede hacerlo usando`
 
 Crear el archivo .env y configurar las siguientes variables
 
---PPName = 
+-PPName = 
 
---DBDriver = 
---DBHost = 
---DBUser = 
---DBName = 
---DBPassword = 
+-DBDriver = 
+-DBHost = 
+-DBUser = 
+-DBName = 
+-DBPassword = 
 
 ## Running the project
 
