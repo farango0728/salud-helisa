@@ -4,12 +4,12 @@ Una entidad de salud desea tener un registro de cada uno de los actores que inte
 proceso de prestación de servicios
 
 ---
-## Requirements
+## Requerimientos
 
 Para el desarrollo, solo necesitará Node.js y un paquete global de nodo, Yarn, instalado en su entorno.
 
 ### Node
-- #### Node ionstalacion en widows
+- #### Node instalacion en widows
 
   simplemente [official Node.js website](https://nodejs.org/) y descargue el instalador.
 Además, asegúrese de tener `git` disponible en su PATH,` npm` podría necesitarlo (puede encontrar (You can find git [here](https://git-scm.com/)).
