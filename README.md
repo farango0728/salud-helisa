@@ -47,19 +47,22 @@ Si necesita actualizar `npm`, puede hacerlo usando`
 
 Crear el archivo .env y configurar las siguientes variables
 
--PPName = 
+- ### PPName = 
+- ### DBDriver = 
+- ### DBHost = 
+- ### DBUser = 
+- ### DBName = 
+- ### DBPassword = 
 
--DBDriver = 
--DBHost = 
--DBUser = 
--DBName = 
--DBPassword = 
+## Ejecutar en Desarrollo
 
-## Running the project
+    $ npm run dev
 
-    $ yarn start
+## Ejecutar en Produccion
 
-## Simple build for production
+    $ npm run build
+    
+## Ejecutar en Test
 
-    $ yarn build
+    $ npm run test
 
