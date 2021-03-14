@@ -26,6 +26,7 @@ export default class MedicalAppointments extends SharedProp{
 
     /** Relation to patients */
     @ManyToOne(
+      type => Patients,
       patient => patient.identification,
     )
       @JoinColumn({ name: 'idPatient' })
@@ -33,6 +34,7 @@ export default class MedicalAppointments extends SharedProp{
 
     /** Relation to Doctors */
     @ManyToOne(
+      type => Doctors,
       doctor => doctor.identification,
     )
     @JoinColumn({ name: 'idDoctor' })
@@ -41,6 +43,7 @@ export default class MedicalAppointments extends SharedProp{
 
     /** Relation to Nurses */
     @ManyToOne(
+      type => Nurses,
       nurse => nurse.identification,
     )
     @JoinColumn({ name: 'idNurse' })

@@ -16,6 +16,7 @@ export default class MedicalExamsAppointment extends SharedProp{
         
     /** Relation to MedicalAppointments */
     @ManyToOne(
+      type => MedicalAppointments,
       medicalAppointments => medicalAppointments.id,
     )
       @JoinColumn({ name: 'idMedicalAppointment' })
@@ -23,10 +24,10 @@ export default class MedicalExamsAppointment extends SharedProp{
 
     /** Relation to MedicalAppointments */
     @ManyToOne(
+      type => MedicalExams,
       medicalExams => medicalExams.id,
     )
     @JoinColumn({ name: 'idMedicalExam' })
-    medicalExam: MedicalExams; 
-      
+    medicalExam: MedicalExams;      
 
 }

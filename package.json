@@ -37,6 +37,7 @@
     "dotenv": "^8.2.0",
     "glob": "^7.1.6",
     "mysql": "^2.18.1",
+    "request": "^2.88.2",
     "typeorm": "^0.2.29"
   },
   "devDependencies": {
