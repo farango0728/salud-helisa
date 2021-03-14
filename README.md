@@ -71,13 +71,13 @@ Crear el archivo .env y configurar las siguientes variables
 - ### Nodejs
   [official Node.js website](https://nodejs.org/)
 - ### Hapi
-  [official Hapi website](https://nodejs.org/)
+  [official Hapi website](https://hapi.dev/)
 - ### Base de datos Mysql
-  [official Mysql website](https://nodejs.org/)
+  [official Mysql website](https://www.mysql.com/)
 - ### TypeOrm
-  [official Typeorm website](https://nodejs.org/)
+  [official Typeorm website](https://typeorm.io/)
 - ### Jest
-  [official Jest website](https://nodejs.org/)
+  [official Jest website](https://jestjs.io/)
 - ### Typescript
-  [official typescript website](https://nodejs.org/)
+  [official typescript website](https://www.typescriptlang.org/)
 
