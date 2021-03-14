@@ -66,3 +66,12 @@ Crear el archivo .env y configurar las siguientes variables
 
     $ npm run test
 
+---
+## Tecnologias implementadas
+- ### Nodejs
+- ### Hapi
+- ### Base de datos Mysql
+- ### TypeOrm
+- ### Jest
+- ### Typescript
+
