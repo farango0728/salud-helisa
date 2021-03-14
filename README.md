@@ -63,6 +63,7 @@ Crear el archivo .env y configurar las siguientes variables
     $ npm run build
     
 ## Ejecutar en Test
+  Al Hacer las pruebas tener encuenta que la abse de datos se encuentra relacionado. cuidado con los insert en la base de datos
 
     $ npm run test
 
