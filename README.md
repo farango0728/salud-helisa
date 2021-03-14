@@ -69,9 +69,15 @@ Crear el archivo .env y configurar las siguientes variables
 ---
 ## Tecnologias implementadas
 - ### Nodejs
+  simplemente [official Node.js website](https://nodejs.org/)
 - ### Hapi
+  simplemente [official Node.js website](https://nodejs.org/)
 - ### Base de datos Mysql
+  simplemente [official Node.js website](https://nodejs.org/)
 - ### TypeOrm
+  simplemente [official Node.js website](https://nodejs.org/)
 - ### Jest
+  simplemente [official Node.js website](https://nodejs.org/)
 - ### Typescript
+  simplemente [official Node.js website](https://nodejs.org/)
 
