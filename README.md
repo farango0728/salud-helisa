@@ -32,7 +32,7 @@ Si la instalación fue exitosa, debería poder ejecutar el siguiente comando.
     $ npm --version
     v
 
-Si necesita actualizar `npm`, puede hacerlo usando`
+Si necesita actualizar `npm`, puede hacerlo usando.
     $ npm install npm -g
 
 ---
