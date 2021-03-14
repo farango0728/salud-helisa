@@ -45,11 +45,15 @@ Si necesita actualizar `npm`, puede hacerlo usando`
 
 ## Configure app
 
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
+Crear el archivo .env y configurar las siguientes variables
 
-- A setting;
-- Another setting;
-- One more setting;
+--PPName = 
+
+--DBDriver = 
+--DBHost = 
+--DBUser = 
+--DBName = 
+--DBPassword = 
 
 ## Running the project
 
