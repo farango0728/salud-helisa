@@ -6,7 +6,7 @@ proceso de prestación de servicios
 ---
 ## Requerimientos
 
-Para el desarrollo, solo necesitará Node.js y un paquete global de nodo, Yarn, instalado en su entorno.
+Para el desarrollo, solo necesitará Node.js y un paquete global de nodo, npm, instalado en su entorno.
 
 ### Node
 - #### Node instalacion en widows
@@ -22,7 +22,7 @@ Además, asegúrese de tener `git` disponible en su PATH,` npm` podría necesita
       $ sudo apt install npm
 
 - #### Otros sistemas operativos
-  Puede encontrar más información sobre la instalación en el [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
+  Puede encontrar más información sobre la instalación en el [official Node.js website](https://nodejs.org/) y ene [official NPM website](https://npmjs.org/).
 
 Si la instalación fue exitosa, debería poder ejecutar el siguiente comando.
 
@@ -35,19 +35,13 @@ Si la instalación fue exitosa, debería poder ejecutar el siguiente comando.
 Si necesita actualizar `npm`, puede hacerlo usando`
     $ npm install npm -g
 
-###
-### Yarn installation
-  After installing node, this project will need yarn too, so just run the following command.
-
-      $ npm install -g yarn
-
 ---
 
-## Install
+## Instalacion
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ yarn install
+    $ https://github.com/farango0728/salud-helisa.git
+    $ cd salud-helisa
+    $ npm install
 
 ## Configure app
 
