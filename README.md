@@ -6,34 +6,33 @@ proceso de prestación de servicios
 ---
 ## Requirements
 
-For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
+Para el desarrollo, solo necesitará Node.js y un paquete global de nodo, Yarn, instalado en su entorno.
 
 ### Node
-- #### Node installation on Windows
+- #### Node ionstalacion en widows
 
-  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+  simplemente [official Node.js website](https://nodejs.org/) y descargue el instalador.
+Además, asegúrese de tener `git` disponible en su PATH,` npm` podría necesitarlo (puede encontrar (You can find git [here](https://git-scm.com/)).
 
-- #### Node installation on Ubuntu
+- #### Node instalacion en Ubuntu
 
-  You can install nodejs and npm easily with apt install, just run the following commands.
+  Puede instalar nodejs y npm fácilmente con apt install, simplemente ejecute los siguientes comandos..
 
       $ sudo apt install nodejs
       $ sudo apt install npm
 
-- #### Other Operating Systems
-  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
+- #### Otros sistemas operativos
+  Puede encontrar más información sobre la instalación en el [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
 
-If the installation was successful, you should be able to run the following command.
+Si la instalación fue exitosa, debería poder ejecutar el siguiente comando.
 
     $ node --version
-    v8.11.3
+    v
 
     $ npm --version
-    6.1.0
+    v
 
-If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
-
+Si necesita actualizar `npm`, puede hacerlo usando`
     $ npm install npm -g
 
 ###
