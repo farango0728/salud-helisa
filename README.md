@@ -33,6 +33,7 @@ Si la instalación fue exitosa, debería poder ejecutar el siguiente comando.
     v
 
 Si necesita actualizar `npm`, puede hacerlo usando.
+    
     $ npm install npm -g
 
 ---
