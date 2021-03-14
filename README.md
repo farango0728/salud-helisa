@@ -12,7 +12,7 @@ Para el desarrollo, solo necesitará Node.js y un paquete global de nodo, Yarn, 
 - #### Node instalacion en widows
 
   simplemente [official Node.js website](https://nodejs.org/) y descargue el instalador.
-Además, asegúrese de tener `git` disponible en su PATH,` npm` podría necesitarlo (puede encontrar (You can find git [here](https://git-scm.com/)).
+Además, asegúrese de tener `git` disponible en su PATH,` npm` podría necesitarlo (puede encontrar (git [here](https://git-scm.com/)).
 
 - #### Node instalacion en Ubuntu
 
