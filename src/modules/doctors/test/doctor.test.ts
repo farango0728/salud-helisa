@@ -5,7 +5,7 @@ describe('Doctors test', () => {
     request(
       {
         method: 'GET',
-        url: 'http://localhost:9000/api/doctors',
+        url: 'http://localhost:9000/api/doctor/doctors',
       },
       function (err, response, body) {
         expect(response.statusCode).toBe(200);
@@ -18,9 +18,9 @@ describe('Doctors test', () => {
     request(
       {
         method: 'POST',
-        url: 'http://localhost:9000/api/doctor',
+        url: 'http://localhost:9000/api/doctor/doctor',
         json: {
-          identification: 201,
+          identification: 909090,
           name: 'Vivian Arango',
           cardNumber: 'QQQ-45228',
           idSpecialty: 101012,
@@ -39,7 +39,7 @@ describe('Doctors test', () => {
     request(
       {
         method: 'POST',
-        url: 'http://localhost:9000/api/doctor',
+        url: 'http://localhost:9000/api/doctor/doctor',
         json: {
           identification1: 1014,
           name1: 'Vivian Arango',

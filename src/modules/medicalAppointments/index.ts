@@ -59,7 +59,7 @@ export = {
     });
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/medicalAppointmentByPatient`,
+      path: `${options.routePrefix}/consult/medicalAppointmentByPatient`,
       options: {
         description: 'Get medicalAppointmentByPatient service',
         notes: 'Service to obtain the health of the project',
@@ -74,7 +74,7 @@ export = {
     });
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/medicalAppointmentByPatientByDate`,
+      path: `${options.routePrefix}/consult/medicalAppointmentByPatientByDate`,
       options: {
         description: 'Get medicalAppointmentByPatientByDate service',
         notes: 'Service to obtain the health of the project',
@@ -90,7 +90,7 @@ export = {
     });
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/medicalAppointmentByPatientByDates`,
+      path: `${options.routePrefix}/consult/medicalAppointmentByPatientByDates`,
       options: {
         description: 'Get medicalAppointmentByPatientByDates service',
         notes: 'Service to obtain the health of the project',

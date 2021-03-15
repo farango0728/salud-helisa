@@ -90,7 +90,6 @@ export async function getMedicalAppointmentByPatientbyDate(req: Hapi.request) : 
   try{
     const connection: Connection = req.server.app.connection;
     const {idPatient, date} = req.query;
-    console.log(date);
     const data = await connection.manager
       .createQueryBuilder()
       .select(['m.id as id', 'm.date as date', 'm.idPatient', 'p.name as patient', 'm.idDoctor', 'd.name as doctor', 'd.specialty as idSpecialty','s.name as especialty', 'm.idNurse', 'n.name as nurse', 'm.state as state'])

@@ -8,7 +8,7 @@ export = {
   register: function (server: Hapi.Server, options: Options): void {
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/medicalExamAppointments`,
+      path: `${options.routePrefix}/consult/medicalExamAppointments`,
       options: {
         description: 'Get medicalExamsAppointments service',
         notes: 'Service to obtain the health of the project',
@@ -18,7 +18,7 @@ export = {
     });
     server.route({
       method: 'POST',
-      path: `${options.routePrefix}/medicalExamAppointment`,
+      path: `${options.routePrefix}/consult/medicalExamAppointment`,
       options: {
         description: 'Get medicalExamsAppointment service',
         notes: 'Service to obtain the health of the project',
