@@ -3,7 +3,6 @@ import {
   Column,
   PrimaryColumn,
   ManyToOne,
-  JoinTable,
   OneToMany
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
@@ -34,5 +33,6 @@ export default class Doctors extends SharedProp{
         type => MedicalAppointments,
         medicalAppointments => medicalAppointments.doctor,
       )
+      
       medicalAppointments: MedicalAppointments[];
 }

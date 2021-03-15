@@ -1,54 +1,52 @@
 import Hapi from '@hapi/hapi';
 import Joi from '@hapi/joi';
 import { Options } from '../../config/types';
-import { getPatients, createPatient, updatePatient } from './controller';
+import { getMedicalExamn, createMedicalExam, updateMedicalExam } from './controller';
 
 export = {
-  name: 'Patients',
+  name: 'MedicalExams',
   register: function (server: Hapi.Server, options: Options): void {
     server.route({
       method: 'GET',
-      path: `${options.routePrefix}/partient/patients`,
+      path: `${options.routePrefix}/exam/medicalExams`,
       options: {
-        description: 'Get patients service',
+        description: 'Get medicalExams service',
         notes: 'Service to obtain the health of the project',
         tags: ['api']
       },
-      handler: getPatients,
+      handler: getMedicalExamn,
     });
     server.route({
       method: 'POST',
-      path: `${options.routePrefix}/partient/patient`,
+      path: `${options.routePrefix}/exam/medicalExam`,
       options: {
-        description: 'Get patients service',
+        description: 'Get medicalExam service',
         notes: 'Service to obtain the health of the project',
         tags: ['api'],
         validate: {
           payload: Joi.object().keys({
-            identification: Joi.number().required(),
             name: Joi.string().required(),
-            state: Joi.boolean().required()
           })
         },
       },
-      handler: createPatient,
+      handler: createMedicalExam,
     });
     server.route({
       method: 'PUT',
-      path: `${options.routePrefix}/partient/updatePatient`,
+      path: `${options.routePrefix}/exam/updateMedicalExam`,
       options: {
-        description: 'Get updatePatient service',
+        description: 'Get updateMedicalExam service',
         notes: 'Service to obtain the health of the project',
         tags: ['api'],
         validate: {
           payload: Joi.object().keys({
-            identification: Joi.number().required(),
+            id: Joi.number().required(),
             name: Joi.string().required(),
             state: Joi.boolean().required()
           })
         },
       },
-      handler: updatePatient,
+      handler: updateMedicalExam,
     });
   },
 };

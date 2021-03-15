@@ -3,12 +3,14 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
-  JoinColumn
+  JoinColumn,
+  OneToMany
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
 import Doctors from './doctors';
 import Patients from './patients';
 import Nurses from './nurses';
+import MedicalExamsAppointment from './medicalExamsAppointment';
         
 @Entity()
 export default class MedicalAppointments extends SharedProp{
@@ -44,8 +46,15 @@ export default class MedicalAppointments extends SharedProp{
       type => Nurses,
       nurse => nurse.identification,
     )
-        @JoinColumn({ name: 'idNurse' })
-        nurse: Nurses;
+    @JoinColumn({ name: 'idNurse' })
+    nurse: Nurses;
+
+    /** Relation to MedicalAppointments */
+    @OneToMany(
+      type => MedicalExamsAppointment,
+      medicalExamsAppointment => medicalExamsAppointment.medicalAppointment,
+    )
+    medicalAppointments: MedicalExamsAppointment[];
 
 
 }

@@ -6,7 +6,7 @@ export = {
   register: function (server: Hapi.Server): void {
     server.route({
       method: 'GET',
-      path: '/status',
+      path: '/api/status',
       options: {
         description: 'Get status service',
         notes: 'Service to obtain the health of the project',

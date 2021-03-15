@@ -6,7 +6,6 @@ import {
 } from 'typeorm';
 import {SharedProp} from './sharedProp.helpers';
 import Doctors from './doctors';
-import MedicalAppointments from './medicalAppointments';
     
     @Entity()
 export default class Specialty extends SharedProp{
