@@ -84,7 +84,7 @@ Crear el archivo .env y configurar las siguientes variables
   [official typescript website](https://www.typescriptlang.org/)
 
 ---
-## Documentacion Enpoint
-- ### Nodejs
+## Documentacion Api
+- ### Insomnia Design
   [official Insomnia Design website](https://insomnia.rest/product/design)
 
